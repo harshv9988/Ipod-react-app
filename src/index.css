@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+.wheel{
+  width: 250px;
+  height: 210px;
+  margin: auto;
+  background-color: darkgray;
+  position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wheel-button{
+  width: 200px;
+  height: 200px;
+  top: 5px;
+  left: 26px;
+  border-radius: 50%;
+  background-color: lightgray;
+  position: absolute;
+}
+
+.center-button{
+  width: 90px;
+    height: 90px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: darkgray;
+    top: 56px;
+    left: 56px;
+}
+
+.menu-image{
+
+  width: 35px;
+  position: absolute;
+  left: 82px;
+  top: 22px;
+}
+
+.fastforward-image{
+    width: 25px;
+    position: absolute;
+    top: 88px;
+    right: 16px;
+}
+
+.fastbackward-image{
+    width: 25px;
+    position: absolute;
+    top: 88px;
+    left: 12px;
+}
+
+.playpause-image{
+  width: 25px;
+  position: absolute;
+  bottom: 24px;
+  left: 88px;
 }
