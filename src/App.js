@@ -1,12 +1,26 @@
 import React from 'react';
 import Wheel from './components/Wheel'
-
+import ZingTouch from 'zingtouch';
 
 class App extends React.Component  {
+
+  rotateClick = () => {
+    let angle = 0;
+    var target = document.getElementById('rotatediv');
+    var region = new ZingTouch.Region(target);
+
+    region.bind(target, 'rotate', function(e) {
+      console.log('rotate effect');
+    });
+
+  }
+
  render(){
   return (
     <div className="App">
-      <Wheel/>
+      <Wheel
+        clickRotate = {this.rotateClick}
+      />
     </div>
   );
  }
