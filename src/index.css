@@ -7,6 +7,17 @@
   position: relative;
 }
 
+.screen{
+  width: 250px;
+  height: 210px;
+  margin: auto;
+  background-color: darkgray;
+  position: relative;
+  padding-top: 5px;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
 .wheel-button{
   width: 200px;
   height: 200px;
@@ -54,4 +65,13 @@
   position: absolute;
   bottom: 24px;
   left: 88px;
+}
+
+/* --------------------------------------------------screen parts-------------------------------------------------------------------- */
+
+.display-screen{
+  width: 95%;
+  height: 98%;
+  background-color: white;
+  margin: auto;
 }

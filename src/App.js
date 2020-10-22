@@ -1,5 +1,6 @@
 import React from 'react';
 import Wheel from './components/Wheel'
+import Screen from './components/Screen'
 import ZingTouch from 'zingtouch';
 
 class App extends React.Component  {
@@ -18,9 +19,13 @@ class App extends React.Component  {
  render(){
   return (
     <div className="App">
+
+      <Screen/>
+
       <Wheel
         clickRotate = {this.rotateClick}
       />
+      
     </div>
   );
  }
