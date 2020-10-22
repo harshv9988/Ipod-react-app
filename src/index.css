@@ -75,3 +75,17 @@
   background-color: white;
   margin: auto;
 }
+
+.list-container{
+  width: 50%;
+  height: 100%;
+  background-color: #c0c0c099;
+}
+
+.title{
+  height: 35px;
+}
+
+.music,.coverflow,.games,.setting{
+  height: 35px;
+}
