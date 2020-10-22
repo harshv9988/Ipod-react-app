@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Screen = () =>{
-
+const Screen = (props) =>{
+    const {coverflow, music, games, setting} = props;
     return (
         <div className="screen">
             <div className="display-screen">
@@ -9,16 +9,16 @@ const Screen = () =>{
                 <div className="title">
                     IPOD.js
                 </div>
-                    <div className="coverflow">
+                    <div className={`${coverflow ? "active" : "coverflow"}`}>
                         coverflow
                     </div>
-                    <div className="music">
+                    <div className={`${music ? "active" : "music"}`}>
                         Music
                     </div>
-                    <div className="games">
+                    <div className={`${games ? "active" : "games"}`}>
                         Games
                     </div>
-                    <div className="setting">
+                    <div className={`${setting ? "active" : "setting"}`}>
                         Setting
                     </div>
                 </div>

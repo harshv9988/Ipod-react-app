@@ -5,6 +5,20 @@ import ZingTouch from 'zingtouch';
 
 class App extends React.Component  {
 
+  constructor(){
+    super();
+
+    this.state={
+
+      coverflow : true,
+      music : false,
+      games :false,
+      setting : false,
+
+    }
+
+  }
+
   rotateClick = () => {
     let angle = 0;
     var target = document.getElementById('rotatediv');
@@ -17,10 +31,16 @@ class App extends React.Component  {
   }
 
  render(){
+   const {coverflow, music, games, setting} = this.state;
   return (
     <div className="App">
 
-      <Screen/>
+      <Screen
+      coverflow = {coverflow}
+      music = {music}
+      games = {games}
+      setting = {setting}
+      />
 
       <Wheel
         clickRotate = {this.rotateClick}
