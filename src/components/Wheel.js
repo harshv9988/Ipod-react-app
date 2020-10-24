@@ -5,7 +5,7 @@ import fastbackward from '../assets/fast-backward.svg'
 import playpause from '../assets/playpause.svg'
 
 const Wheel = (props) => {
-    const {clickRotate} = props;
+    const {clickRotate, centerClick} = props;
 
     return (
         <div className="wheel" onMouseOver = {clickRotate} id="rotatediv">
@@ -14,7 +14,7 @@ const Wheel = (props) => {
                 <img src={fastforward} className="fastforward-image"/>
                 <img src={fastbackward} className="fastbackward-image"/>
                 <img src={playpause} className="playpause-image"/>
-                <div className="center-button">
+                <div className="center-button" onClick={centerClick}>
 
                 </div>
             </div>

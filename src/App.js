@@ -1,6 +1,7 @@
 import React from 'react';
-import Wheel from './components/Wheel'
-import Screen from './components/Screen'
+import Wheel from './components/Wheel';
+import Screen from './components/Screen';
+import MusicScreen from './components/MusicScreen';
 import ZingTouch from 'zingtouch';
 
 class App extends React.Component  {
@@ -14,6 +15,8 @@ class App extends React.Component  {
       music : false,
       games :false,
       setting : false,
+
+      musiclist : false,
 
     }
 
@@ -121,8 +124,18 @@ class App extends React.Component  {
 
 }
 
+  centerClick = () => {
+
+   
+    if(this.state.music && this.state.musiclist===false){
+      this.setState({
+        musiclist : true,
+      })
+    }
+  }
+
  render(){
-   const {coverflow, music, games, setting} = this.state;
+   const {coverflow, music, games, setting, musiclist} = this.state;
   return (
     <div className="App">
 
@@ -131,10 +144,12 @@ class App extends React.Component  {
       music = {music}
       games = {games}
       setting = {setting}
+      musiclist = {musiclist}
       />
 
       <Wheel
         clickRotate = {this.rotateClick}
+        centerClick = {this.centerClick}
       />
       
     </div>
