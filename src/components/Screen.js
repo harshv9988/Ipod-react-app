@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Screen = (props) =>{
-    const {coverflow, music, games, setting, musiclist} = props;
+    const {coverflow, music, games, setting, musiclist, artist, songs} = props;
     return (
         <div className="screen">
             <div className="display-screen">
@@ -23,10 +23,10 @@ const Screen = (props) =>{
                     </div>
                 </div>
                 <div className={`${musiclist ? "list-container" : "hide"}`}>
-                    <div className={`${coverflow ? "active" : "artist"}`}>
+                    <div className={`${artist ? "active" : "artist"}`}>
                         Artist
                     </div>
-                    <div className={`${music ? "active" : "songs"}`}>
+                    <div className={`${songs ? "active" : "songs"}`}>
                         Songs
                     </div>
                 </div>

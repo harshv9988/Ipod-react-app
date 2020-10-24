@@ -81,7 +81,7 @@
   height: 35px;
 }
 
-.music,.coverflow,.games,.setting{
+.music,.coverflow,.games,.setting, .artist, .songs{
   height: 21px;
   padding: 5px;
 }
