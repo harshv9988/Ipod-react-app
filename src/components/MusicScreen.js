@@ -1,11 +1,11 @@
 import React from 'react';
 
-const MusicScreen = () => {
-
+const MusicScreen = (props) => {
+    const {musicscreen} = props;
     return(
 
-        <div className="music-screen">
-           
+        <div className={`${musicscreen ? "music-screen" : "hide"}`}>
+           Fuckaaaaaaaaaaaaaaaaaa
         </div>
 
     );

@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Screen = (props) =>{
-    const {coverflow, music, games, setting, musiclist, artist, songs} = props;
+    const {coverflow, music, games, setting, musiclist, artist, songs, musicscreen} = props;
     return (
-        <div className="screen">
+        <div className={`${musicscreen ? "hide" : "screen"}`}>
             <div className="display-screen">
                 <div className={`${musiclist ? "hide" : "list-container"}`}>
                     <div className="title">

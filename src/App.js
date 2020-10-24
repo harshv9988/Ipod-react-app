@@ -20,6 +20,7 @@ class App extends React.Component  {
       songs : false,
 
       musiclist : false,
+      musicscreen : false
 
     }
 
@@ -186,19 +187,30 @@ class App extends React.Component  {
         musiclist : true,
       })
     }
+
+    if(this.state.musiclist && this.state.songs){
+      this.setState({
+        musicscreen : true
+      })
+    }
   }
 
 
   showMenu = () => {
-    if(this.state.musiclist==true){
+    if(this.state.musiclist && this.state.musicscreen){
       this.setState({
-        musiclist : false,
+        musicscreen : false,
+      })
+    }
+    else if(this.state.musiclist){
+      this.setState({
+        musiclist : false
       })
     }
   }
 
  render(){
-   const {coverflow, music, games, setting, musiclist, artist, songs} = this.state;
+   const {coverflow, music, games, setting, musiclist, artist, songs, musicscreen} = this.state;
   return (
     <div className="App">
 
@@ -210,6 +222,11 @@ class App extends React.Component  {
       musiclist = {musiclist}
       artist = {artist}
       songs = {songs}
+      musicscreen = {musicscreen}
+      />
+
+      <MusicScreen
+        musicscreen = {musicscreen}
       />
 
       <Wheel
