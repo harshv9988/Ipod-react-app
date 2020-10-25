@@ -6,6 +6,7 @@ import CoverflowScreen from './components/CoverflowScreen';
 import GamesScreen from './components/GamesScreen';
 import SettingScreen from './components/SettingScreen';
 import ZingTouch from 'zingtouch';
+import song from './assets/songs/Imagine-Dragons-Birds.mp3'
 
 class App extends React.Component  {
 
@@ -28,7 +29,13 @@ class App extends React.Component  {
       settingscreen : false,
       coverflowscreen : false,
 
+      
+      play : false,
+      insidemusic : false,
+
     }
+
+    this.audio = new Audio(song)
 
   }
 
@@ -187,6 +194,7 @@ class App extends React.Component  {
 
   centerClick = () => {
 
+    
    
     if(this.state.music && this.state.musiclist===false){
       this.setState({
@@ -198,6 +206,11 @@ class App extends React.Component  {
       this.setState({
         musicscreen : true
       })
+      if(this.state.insidemusic){
+        this.state.play = false;
+      }
+      this.state.insidemusic = true;
+      this.playPause();
     }
     else if(this.state.musiclist===false && this.state.coverflow){
       this.setState({
@@ -249,6 +262,26 @@ class App extends React.Component  {
 
   }
 
+
+  playPause =() => {
+
+    if(this.state.insidemusic){
+      if(this.state.play==false){
+        this.setState({
+          play: true,
+        });
+        this.audio.play();
+      }
+      else if(this.state.play==true){
+        this.setState({
+          play: false,
+        });
+        this.audio.pause();
+      }
+  
+    }
+  }
+
  render(){
    const {coverflow, music, games, setting, musiclist, artist, songs, musicscreen, coverflowscreen, gamesscreen, settingscreen} = this.state;
   return (
@@ -286,6 +319,7 @@ class App extends React.Component  {
         clickRotate = {this.rotateClick}
         centerClick = {this.centerClick}
         showMenu = {this.showMenu}
+        playPause = {this.playPause}
       />
       
     </div>
