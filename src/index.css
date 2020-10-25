@@ -25,6 +25,33 @@
   padding-top: 5px;
 }
 
+.coverflow-screen{
+  width: 250px;
+  height: 210px;
+  margin: auto;
+  background-color: darkgray;
+  position: relative;
+  padding-top: 5px;
+}
+
+.games-screen{
+  width: 250px;
+  height: 210px;
+  margin: auto;
+  background-color: darkgray;
+  position: relative;
+  padding-top: 5px;
+}
+
+.setting-screen{
+  width: 250px;
+  height: 210px;
+  margin: auto;
+  background-color: darkgray;
+  position: relative;
+  padding-top: 5px;
+}
+
 /* ----------------------------------------------------wheel component----------------------------------------------------------------------- */
 
 .wheel-button{
