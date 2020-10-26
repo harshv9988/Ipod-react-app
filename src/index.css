@@ -1,19 +1,32 @@
 
-.wheel{
-  width: 250px;
-  height: 210px;
-  margin: auto;
+.structure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.body{
+  width: 380px;
+  height: 570px;
   background-color: darkgray;
+  border-radius: 20px;
+}
+
+
+.wheel{
+  width: 100%;
+  height: 48%;
+  /* background-color: darkgray; */
   position: relative;
 }
 
 .screen{
-  width: 250px;
-  height: 210px;
-  margin: auto;
-  background-color: darkgray;
+  width: 100%;
+  height: 50%;
+  /* background-color: darkgray; */
   position: relative;
-  padding-top: 5px;
+  padding-top: 12px;
 }
 
 .music-screen{
@@ -55,58 +68,59 @@
 /* ----------------------------------------------------wheel component----------------------------------------------------------------------- */
 
 .wheel-button{
-  width: 200px;
-  height: 200px;
-  top: 5px;
-  left: 26px;
+  width: 240px;
+  height: 240px;
+  top: 14px;
+  left: 71px;
   border-radius: 50%;
   background-color: lightgray;
   position: absolute;
 }
 
 .center-button{
-  width: 90px;
-    height: 90px;
+    
+    width: 110px;
+    height: 110px;
     position: absolute;
     border-radius: 50%;
     background-color: darkgray;
-    top: 56px;
-    left: 56px;
+    top: 64px;
+    left: 64px;
 }
 
 .menu-image{
 
-  width: 35px;
-  position: absolute;
-  left: 82px;
-  top: 22px;
+    width: 46px;
+    position: absolute;
+    left: 97px;
+    top: 28px;
 }
 
 .fastforward-image{
-    width: 25px;
-    position: absolute;
-    top: 88px;
-    right: 16px;
+  width: 35px;
+  position: absolute;
+  top: 108px;
+  right: 20px;
 }
 
 .fastbackward-image{
-    width: 25px;
-    position: absolute;
-    top: 88px;
-    left: 12px;
+  width: 35px;
+  position: absolute;
+  top: 108px;
+  left: 17px;
 }
 
 .playpause-image{
-  width: 25px;
+  width: 35px;
   position: absolute;
-  bottom: 24px;
-  left: 88px;
+  bottom: 27px;
+  left: 100px;
 }
 
 /* --------------------------------------------------screen parts-------------------------------------------------------------------- */
 
 .display-screen{
-  width: 95%;
+  width: 92%;
   height: 98%;
   background-color: white;
   margin: auto;

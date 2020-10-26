@@ -287,40 +287,46 @@ class App extends React.Component  {
   return (
     <div className="App">
 
-      <Screen
-      coverflow = {coverflow}
-      music = {music}
-      games = {games}
-      setting = {setting}
-      musiclist = {musiclist}
-      artist = {artist}
-      songs = {songs}
-      musicscreen = {musicscreen}
-      coverflowscreen = {coverflowscreen}
-      gamesscreen = {gamesscreen}
-      settingscreen = {settingscreen}
-      />
+     <div className="structure">
 
-      <MusicScreen
-        musicscreen = {musicscreen}
-      />
+     <div className="body">
+          <Screen
+          coverflow = {coverflow}
+          music = {music}
+          games = {games}
+          setting = {setting}
+          musiclist = {musiclist}
+          artist = {artist}
+          songs = {songs}
+          musicscreen = {musicscreen}
+          coverflowscreen = {coverflowscreen}
+          gamesscreen = {gamesscreen}
+          settingscreen = {settingscreen}
+          />
 
-      <CoverflowScreen
-        coverflowscreen = {coverflowscreen}
-      />
-      <GamesScreen
-        gamesscreen = {gamesscreen}
-      />
-      <SettingScreen
-        settingscreen = {settingscreen}
-      />
+          <MusicScreen
+            musicscreen = {musicscreen}
+          />
 
-      <Wheel
-        clickRotate = {this.rotateClick}
-        centerClick = {this.centerClick}
-        showMenu = {this.showMenu}
-        playPause = {this.playPause}
-      />
+          <CoverflowScreen
+            coverflowscreen = {coverflowscreen}
+          />
+          <GamesScreen
+            gamesscreen = {gamesscreen}
+          />
+          <SettingScreen
+            settingscreen = {settingscreen}
+          />
+
+          <Wheel
+            clickRotate = {this.rotateClick}
+            centerClick = {this.centerClick}
+            showMenu = {this.showMenu}
+            playPause = {this.playPause}
+          />
+      </div>
+
+     </div>
       
     </div>
   );
