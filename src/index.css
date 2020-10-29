@@ -112,6 +112,25 @@
   margin: auto;
 }
 
+.display-flex-screen {
+  width: 92%;
+  height: 98%;
+  background-color: white;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.child-1 {
+  width: 50%;
+  height: 100%;
+}
+
+.child-2 {
+  width: 50%;
+  height: 100%;
+}
+
 .title {
   height: 35px;
 }
@@ -172,7 +191,7 @@
 }
 
 .list-container {
-  width: 50%;
+  width: 100%;
   height: 100%;
   background-color: #c0c0c099;
 }
