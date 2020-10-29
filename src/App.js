@@ -2,7 +2,6 @@ import React from "react";
 import Wheel from "./components/Wheel";
 import Screen from "./components/Screen";
 import MusicScreen from "./components/MusicScreen";
-import CoverflowScreen from "./components/CoverflowScreen";
 import GamesScreen from "./components/GamesScreen";
 import SettingScreen from "./components/SettingScreen";
 import ZingTouch from "zingtouch";
@@ -29,6 +28,7 @@ class App extends React.Component {
 
       play: false,
       insidemusic: false,
+      globalplay: false,
     };
 
     this.audio = new Audio(song);
@@ -165,24 +165,24 @@ class App extends React.Component {
 
   centerClick = () => {
     if (this.state.music && this.state.musiclist === false) {
+      // opening seconadary list of music screen
       this.setState({
         musiclist: true,
       });
     }
 
     if (this.state.musiclist && this.state.songs) {
+      // opening music screen and playing song
       this.setState({
         musicscreen: true,
       });
-      if (this.state.insidemusic) {
-        this.state.play = false;
-      }
-      this.state.insidemusic = true;
-      this.playPause();
+
+      this.globalPlayPause(); // calling playpause to play the song
     } else if (this.state.musiclist === false && this.state.coverflow) {
       this.setState({
         coverflowscreen: true,
       });
+      this.globalPlayPause();
     } else if (this.state.musiclist === false && this.state.games) {
       this.setState({
         gamesscreen: true,
@@ -225,18 +225,25 @@ class App extends React.Component {
   };
 
   playPause = () => {
-    if (this.state.insidemusic) {
-      if (this.state.play == false) {
-        this.setState({
-          play: true,
-        });
-        this.audio.play();
-      } else if (this.state.play == true) {
-        this.setState({
-          play: false,
-        });
-        this.audio.pause();
-      }
+    if (this.state.play == false) {
+      this.setState({
+        play: true,
+      });
+      this.audio.play();
+    } else if (this.state.play == true) {
+      this.setState({
+        play: false,
+      });
+      this.audio.pause();
+    }
+  };
+
+  globalPlayPause = () => {
+    if (this.state.globalplay == false) {
+      this.playPause();
+      this.setState({
+        globalplay: true,
+      });
     }
   };
 
@@ -272,9 +279,11 @@ class App extends React.Component {
               settingscreen={settingscreen}
             />
 
-            <MusicScreen musicscreen={musicscreen} />
+            <MusicScreen
+              musicscreen={musicscreen}
+              coverflowscreen={coverflowscreen}
+            />
 
-            <CoverflowScreen coverflowscreen={coverflowscreen} />
             <GamesScreen gamesscreen={gamesscreen} />
             <SettingScreen settingscreen={settingscreen} />
 

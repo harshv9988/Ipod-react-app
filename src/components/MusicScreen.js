@@ -1,15 +1,13 @@
-import React from 'react';
+import React from "react";
 
 const MusicScreen = (props) => {
-    const {musicscreen} = props;
-    return(
-
-        <div className={`${musicscreen ? "music-screen" : "hide"}`}>
-           Fuckaaaaaaaaaaaaaaaaaa
-        </div>
-
-    );
-
-
-}
+  const { musicscreen, coverflowscreen } = props;
+  return (
+    <div
+      className={`${musicscreen || coverflowscreen ? "music-screen" : "hide"}`}
+    >
+      Fuckaaaaaaaaaaaaaaaaaa
+    </div>
+  );
+};
 export default MusicScreen;
