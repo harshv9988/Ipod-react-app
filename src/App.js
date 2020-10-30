@@ -176,7 +176,12 @@ class App extends React.Component {
       this.setState({
         musicscreen: true,
       });
-
+      this.globalPlayPause(); // calling playpause to play the song
+    } else if (this.state.musiclist && this.state.artist) {
+      // opening music screen and playing song using artist option
+      this.setState({
+        musicscreen: true,
+      });
       this.globalPlayPause(); // calling playpause to play the song
     } else if (this.state.musiclist === false && this.state.coverflow) {
       this.setState({
