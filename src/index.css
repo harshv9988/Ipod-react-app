@@ -53,6 +53,20 @@
   padding-top: 12px;
 }
 
+/* --------------------------------------------------------List aside wallpapers------------------------------------------------------------ */
+
+.image-container {
+  width: 60%;
+  height: 60%;
+  margin: auto;
+  margin-top: 54px;
+}
+
+.wallpaper {
+  width: 100%;
+  height: 100%;
+}
+
 /* ----------------------------------------------------wheel component----------------------------------------------------------------------- */
 
 .wheel-button {
@@ -129,6 +143,7 @@
 .child-2 {
   width: 50%;
   height: 100%;
+  background-color: whitesmoke;
 }
 
 .title {

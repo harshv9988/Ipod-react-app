@@ -1,4 +1,8 @@
 import React from "react";
+import songposter from "../assets/song-poster.jpg";
+import artistposter from "../assets/imagine-dragons.png";
+import settingposter from "../assets/settings.svg";
+import gameposter from "../assets/game-console.svg";
 
 const Screen = (props) => {
   const {
@@ -38,7 +42,30 @@ const Screen = (props) => {
             <div className={`${songs ? "active" : "songs"}`}>Songs</div>
           </div>
         </div>
-        <div className="child-2">hello</div>
+        <div className="child-2">
+          <img
+            src={artistposter}
+            alt="poster"
+            className={`${coverflow ? "wallpaper" : "hide"}`}
+          />
+          <img
+            src={songposter}
+            alt="poster"
+            className={`${music ? "wallpaper" : "hide"}`}
+          />
+          <div className="image-container">
+            <img
+              src={gameposter}
+              alt="gameicon"
+              className={`${games ? "wallpaper" : "hide"}`}
+            />
+            <img
+              src={settingposter}
+              alt="settingicon"
+              className={`${setting ? "wallpaper" : "hide"}`}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
