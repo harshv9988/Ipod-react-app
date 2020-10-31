@@ -19,6 +19,9 @@ const MusicScreen = (props) => {
             <h4>Imagine Dragons</h4>
           </div>
         </div>
+        <div className="outer">
+          <div className="inner"></div>
+        </div>
       </div>
     </div>
   );

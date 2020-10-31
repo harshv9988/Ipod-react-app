@@ -199,6 +199,25 @@ class App extends React.Component {
     }
   };
 
+  setWidth = () => {
+    console.log("hello");
+    var fill = document.querySelector(".inner");
+    var playingaudio = this.audio;
+    let duration = playingaudio.duration;
+    let base = duration / 100;
+
+    var fillbar = setInterval(() => {
+      console.log("cleared");
+      let ct = parseInt(playingaudio.currentTime);
+      let width = ct / base;
+      fill.style.width = `${width}%`;
+    }, duration * 10);
+
+    if (this.state.play == false) {
+      clearInterval(fillbar);
+    }
+  };
+
   showMenu = () => {
     if (this.state.musiclist && this.state.musicscreen) {
       this.setState({
@@ -231,15 +250,25 @@ class App extends React.Component {
 
   playPause = () => {
     if (this.state.play == false) {
-      this.setState({
-        play: true,
-      });
-      this.audio.play();
+      this.setState(
+        {
+          play: true,
+        },
+        () => {
+          this.setWidth();
+          this.audio.play();
+        }
+      );
     } else if (this.state.play == true) {
-      this.setState({
-        play: false,
-      });
-      this.audio.pause();
+      this.setState(
+        {
+          play: false,
+        },
+        () => {
+          this.setWidth();
+          this.audio.pause();
+        }
+      );
     }
   };
 

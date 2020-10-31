@@ -194,6 +194,18 @@
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-weight: inherit;
 }
+
+.outer {
+  border: 1px solid black;
+  width: 200px;
+  height: 10px;
+  margin: auto;
+}
+.inner {
+  background-color: blue;
+  width: 0%;
+  height: 100%;
+}
 /* --------------------------------------------------------game screen parts----------------------------------------------------------------- */
 .display-screen img {
   width: 100%;
