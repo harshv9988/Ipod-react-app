@@ -29,6 +29,7 @@ class App extends React.Component {
       play: false,
       insidemusic: false,
       globalplay: false,
+      barfill: undefined,
     };
 
     this.audio = new Audio(song);
@@ -206,16 +207,12 @@ class App extends React.Component {
     let duration = playingaudio.duration;
     let base = duration / 100;
 
-    var fillbar = setInterval(() => {
+    this.state.barfill = setInterval(() => {
       console.log("cleared");
       let ct = parseInt(playingaudio.currentTime);
       let width = ct / base;
       fill.style.width = `${width}%`;
     }, duration * 10);
-
-    if (this.state.play == false) {
-      clearInterval(fillbar);
-    }
   };
 
   showMenu = () => {
@@ -265,7 +262,7 @@ class App extends React.Component {
           play: false,
         },
         () => {
-          this.setWidth();
+          clearInterval(this.state.barfill);
           this.audio.pause();
         }
       );

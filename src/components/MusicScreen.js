@@ -19,8 +19,12 @@ const MusicScreen = (props) => {
             <h4>Imagine Dragons</h4>
           </div>
         </div>
-        <div className="outer">
-          <div className="inner"></div>
+        <div className="bar-container">
+          <span className="left-span">0:00</span>
+          <div className="outer">
+            <div className="inner"></div>
+          </div>
+          <span className="right-span">4:00</span>
         </div>
       </div>
     </div>

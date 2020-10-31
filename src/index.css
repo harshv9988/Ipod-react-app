@@ -195,6 +195,22 @@
   font-weight: inherit;
 }
 
+.bar-container {
+  margin-top: 35px;
+  position: relative;
+}
+
+.left-span {
+  position: absolute;
+  top: -3px;
+  left: 30px;
+}
+.right-span {
+  position: absolute;
+  right: 30px;
+  top: -3px;
+}
+
 .outer {
   border: 1px solid black;
   width: 200px;
