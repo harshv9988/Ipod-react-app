@@ -180,6 +180,20 @@
   width: 45%;
   height: 100%;
 }
+
+.musicchild-2 h3 {
+  margin-top: 6px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.musicchild-2 h4 {
+  margin: 0px;
+  font-size: 14px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: inherit;
+}
 /* --------------------------------------------------------game screen parts----------------------------------------------------------------- */
 .display-screen img {
   width: 100%;
