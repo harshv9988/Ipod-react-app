@@ -22,7 +22,9 @@ const MusicScreen = (props) => {
         <div className="bar-container">
           <span className="left-span">0:00</span>
           <div className="outer">
-            <div className="inner"></div>
+            <div className="inner">
+              <div className="float-div"></div>
+            </div>
           </div>
           <span className="right-span">3:39</span>
         </div>
