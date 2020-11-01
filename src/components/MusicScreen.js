@@ -24,7 +24,7 @@ const MusicScreen = (props) => {
           <div className="outer">
             <div className="inner"></div>
           </div>
-          <span className="right-span">4:00</span>
+          <span className="right-span">3:39</span>
         </div>
       </div>
     </div>
