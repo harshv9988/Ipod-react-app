@@ -3,6 +3,7 @@ import songposter from "../assets/song-poster.jpg";
 import artistposter from "../assets/imagine-dragons.png";
 import settingposter from "../assets/settings.svg";
 import gameposter from "../assets/game-console.svg";
+import rightArrow from "../assets/arrow_right.svg";
 
 const Screen = (props) => {
   const {
@@ -32,14 +33,30 @@ const Screen = (props) => {
             <div className="title">IPOD.js</div>
             <div className={`${coverflow ? "active" : "coverflow"}`}>
               coverflow
+              <img src={rightArrow} alt="-->" className="arrow" />
             </div>
-            <div className={`${music ? "active" : "music"}`}>Music</div>
-            <div className={`${games ? "active" : "games"}`}>Games</div>
-            <div className={`${setting ? "active" : "setting"}`}>Setting</div>
+            <div className={`${music ? "active" : "music"}`}>
+              Music
+              <img src={rightArrow} alt="-->" className="arrow" />
+            </div>
+            <div className={`${games ? "active" : "games"}`}>
+              Games
+              <img src={rightArrow} alt="-->" className="arrow" />
+            </div>
+            <div className={`${setting ? "active" : "setting"}`}>
+              Setting
+              <img src={rightArrow} alt="-->" className="arrow" />
+            </div>
           </div>
           <div className={`${musiclist ? "list-container" : "hide"}`}>
-            <div className={`${artist ? "active" : "artist"}`}>Artist</div>
-            <div className={`${songs ? "active" : "songs"}`}>Songs</div>
+            <div className={`${artist ? "active" : "artist"}`}>
+              Artist
+              <img src={rightArrow} alt="-->" className="arrow" />
+            </div>
+            <div className={`${songs ? "active" : "songs"}`}>
+              Songs
+              <img src={rightArrow} alt="-->" className="arrow" />
+            </div>
           </div>
         </div>
         <div className="child-2">
