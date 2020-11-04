@@ -378,3 +378,49 @@
 .round-image {
   border-radius: 10px;
 }
+
+/* -----------------------------------------------------Media queries---------------------------------------------------------- */
+
+@media only screen and (max-width: 390px) {
+  .wheel-button {
+    left: 59px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .wheel-button {
+    left: 52px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .wheel-button {
+    width: 220px;
+    height: 220px;
+    left: 42px;
+    top: 22px;
+  }
+  .center-button {
+    top: 55px;
+    left: 55px;
+  }
+
+  .fastforward-image {
+    top: 101px;
+    right: 15px;
+  }
+
+  .fastbackward-image {
+    top: 101px;
+    left: 15px;
+  }
+
+  .menu-image {
+    left: 87px;
+    top: 26px;
+  }
+  .playpause-image {
+    bottom: 22px;
+    left: 90px;
+  }
+}

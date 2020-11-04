@@ -287,6 +287,20 @@ class App extends React.Component {
   };
 
   globalPlayPause = () => {
+    var playingaudio = this.audio;
+
+    if (playingaudio.currentTime >= playingaudio.duration) {
+      console.log("in");
+      this.setState(
+        {
+          play: false,
+        },
+        () => {
+          this.playPause();
+        }
+      );
+    }
+
     if (this.state.globalplay === false) {
       this.playPause();
       this.setState({
