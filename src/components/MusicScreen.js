@@ -1,13 +1,30 @@
 import React from "react";
 import songposter from "../assets/musicscreen-poster.jpg";
+import battery from "../assets/battery.svg";
+import playicon from "../assets/play.svg";
+import pause from "../assets/pause.svg";
 
 const MusicScreen = (props) => {
-  const { musicscreen, coverflowscreen } = props;
+  const { musicscreen, coverflowscreen, globalplay, play } = props;
   return (
     <div
       className={`${musicscreen || coverflowscreen ? "music-screen" : "hide"}`}
     >
       <div className="display-screen">
+        <div className="header specialbordershift">
+          <span className="header-name">iPod.js</span>
+          <span className={`${globalplay ? "" : "hide"}`}>
+            <span className={`${play ? "play" : "hide"}`}>
+              <img src={playicon} alt="play" />
+            </span>
+            <span className={`${play ? "hide" : "play"}`}>
+              <img src={pause} alt="pause" />
+            </span>
+          </span>
+          <span className="battery">
+            <img src={battery} alt="battery" />
+          </span>
+        </div>
         <div className="musicscreen-flex">
           <div className="musicchild-1">
             <img src={songposter} alt="songposter" />

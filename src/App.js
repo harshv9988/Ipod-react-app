@@ -310,6 +310,8 @@ class App extends React.Component {
       coverflowscreen,
       gamesscreen,
       settingscreen,
+      globalplay,
+      play,
     } = this.state;
     return (
       <div className="App">
@@ -327,11 +329,15 @@ class App extends React.Component {
               coverflowscreen={coverflowscreen}
               gamesscreen={gamesscreen}
               settingscreen={settingscreen}
+              play={play}
+              globalplay={globalplay}
             />
 
             <MusicScreen
               musicscreen={musicscreen}
               coverflowscreen={coverflowscreen}
+              play={play}
+              globalplay={globalplay}
             />
 
             <GamesScreen gamesscreen={gamesscreen} />
