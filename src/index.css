@@ -7,8 +7,12 @@
 .body {
   width: 380px;
   height: 570px;
-  background-color: darkgray;
-  border-radius: 20px;
+  /* background-color: darkgray; */
+  background-color: #a09e9ec4;
+  border-radius: 32px;
+  box-shadow: inset 0px 0px 50px #555;
+  -webkit-box-reflect: below 1px -webkit-gradient(linear, right top, right
+        bottom, from(transparent), to(rgba(255, 255, 255, 0.3)));
 }
 
 .wheel {
@@ -369,4 +373,8 @@
 .bordershift {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
+}
+
+.round-image {
+  border-radius: 10px;
 }

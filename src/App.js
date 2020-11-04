@@ -48,7 +48,7 @@ class App extends React.Component {
     activeRegion.bind(target, "rotate", function (event) {
       var angle = event.detail.distanceFromLast;
 
-      if (self.state.musiclist == false) {
+      if (self.state.musiclist === false) {
         if (angle < 0) {
           if (counter > 0 && counter <= 5) {
             self.setState({
@@ -203,14 +203,12 @@ class App extends React.Component {
   };
 
   setWidth = () => {
-    // console.log("hello");
     var fill = document.querySelector(".inner");
     var playingaudio = this.audio;
     let duration = playingaudio.duration;
     let base = duration / 100;
 
     this.state.barfill = setInterval(() => {
-      // console.log("cleared");
       let ct = parseInt(playingaudio.currentTime);
       let width = ct / base;
       fill.style.width = `${width}%`;
@@ -263,7 +261,7 @@ class App extends React.Component {
   };
 
   playPause = () => {
-    if (this.state.play == false) {
+    if (this.state.play === false) {
       this.setState(
         {
           play: true,
@@ -274,7 +272,7 @@ class App extends React.Component {
           this.audio.play();
         }
       );
-    } else if (this.state.play == true) {
+    } else if (this.state.play === true) {
       this.setState(
         {
           play: false,
@@ -289,7 +287,7 @@ class App extends React.Component {
   };
 
   globalPlayPause = () => {
-    if (this.state.globalplay == false) {
+    if (this.state.globalplay === false) {
       this.playPause();
       this.setState({
         globalplay: true,
