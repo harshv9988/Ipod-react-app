@@ -48,7 +48,10 @@ class App extends React.Component {
     activeRegion.bind(target, "rotate", function (event) {
       var angle = event.detail.distanceFromLast;
 
-      if (self.state.musiclist === false) {
+      if (
+        self.state.musiclist === false &&
+        self.state.coverflowscreen === false
+      ) {
         if (angle < 0) {
           if (counter > 0 && counter <= 5) {
             self.setState({
