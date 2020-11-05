@@ -11,6 +11,7 @@ const MusicScreen = (props) => {
       className={`${musicscreen || coverflowscreen ? "music-screen" : "hide"}`}
     >
       <div className="display-screen">
+        {/* -------------------------------------Header-------------------------------------------------------- */}
         <div className="header specialbordershift">
           <span className="header-name">iPod.js</span>
           <span className={`${globalplay ? "" : "hide"}`}>
@@ -25,6 +26,7 @@ const MusicScreen = (props) => {
             <img src={battery} alt="battery" />
           </span>
         </div>
+        {/*--------------------------------------Music screen flex------------------------------------------------- */}
         <div className="musicscreen-flex">
           <div className="musicchild-1">
             <img src={songposter} alt="songposter" />
@@ -36,6 +38,7 @@ const MusicScreen = (props) => {
             <h4>Imagine Dragons</h4>
           </div>
         </div>
+        {/* ------------------------------------Timer and Bar------------------------------------------------------------ */}
         <div className="bar-container">
           <span className="left-span">0:00</span>
           <div className="outer">

@@ -5,6 +5,7 @@ const SettingScreen = (props) => {
   const { settingscreen } = props;
   return (
     <div className={`${settingscreen ? "setting-screen" : "hide"}`}>
+      {/* --------------------------------setting screen display image and author name-------------------------------------- */}
       <div className="display-screen black-display">
         <div className="tool">
           <img src={reacticon} alt="reacticon" />

@@ -9,6 +9,7 @@ const Wheel = (props) => {
 
   return (
     <div className="wheel" onMouseEnter={clickRotate} id="rotatediv">
+      {/*wheel div conatining all images*/}
       <div className="wheel-button">
         <img src={menu} alt="Menu" className="menu-image" onClick={showMenu} />
         <img src={fastforward} className="fastforward-image" />

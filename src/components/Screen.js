@@ -32,9 +32,12 @@ const Screen = (props) => {
           : "screen"
       }`}
     >
+      {/* -----------------------------------------------Display Screen Flex-------------------------------------------------------- */}
       <div className="display-flex-screen">
         <div className="child-1">
+          {/* ----------------------------------------------Main screen List------------------------------------------------------------ */}
           <div className={`${musiclist ? "hide" : "list-container"}`}>
+            {/* ---------------------------------------------Header--------------------------------------------------------------------- */}
             <div className="header ">
               <span className="header-name">iPod.js</span>
               <span className={`${globalplay ? "" : "hide"}`}>
@@ -66,7 +69,9 @@ const Screen = (props) => {
               <img src={rightArrow} alt="-->" className="arrow" />
             </div>
           </div>
+          {/* --------------------------------------------Music screen list------------------------------------------------ */}
           <div className={`${musiclist ? "list-music-container" : "hide"}`}>
+            {/* ----------------------------------------------Header--------------------------------------------------------- */}
             <div className="header">
               <span className="header-name">iPod.js</span>
               <span className={`${globalplay ? "" : "hide"}`}>
@@ -91,6 +96,7 @@ const Screen = (props) => {
             </div>
           </div>
         </div>
+        {/* ----------------------------------images changing according to actice class in flex------------------------------------ */}
         <div className="child-2 bordershift">
           <img
             src={artistposter}
