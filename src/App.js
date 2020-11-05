@@ -50,7 +50,9 @@ class App extends React.Component {
 
       if (
         self.state.musiclist === false &&
-        self.state.coverflowscreen === false
+        self.state.coverflowscreen === false &&
+        self.state.settingscreen === false &&
+        self.state.gamesscreen === false
       ) {
         if (angle < 0) {
           if (counter > 0 && counter <= 5) {
@@ -170,6 +172,13 @@ class App extends React.Component {
   };
 
   centerClick = () => {
+    let button = document.querySelector(".center-button");
+
+    button.style.boxShadow = "inset 0 1em 4em #5d5b5b";
+    setTimeout(() => {
+      button.style.boxShadow = "none";
+    }, 100);
+
     if (this.state.music && this.state.musiclist === false) {
       // opening seconadary list of music screen
       this.setState({
