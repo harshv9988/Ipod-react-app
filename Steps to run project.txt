@@ -1,0 +1,13 @@
+
+STEPS to run project
+
+1. after opening the project run command-> (npm install) to install all node_module packages
+2. after successfull installation run command (npm start) to run localhost server
+
+
+additional features
+
+1. song plays automatically when someone opens coverflow and music(song,artist) option in ipod.
+2. to play and pause the song we can use play/pause button at the bottom og ipod.
+3. play and pausing the song will be shown in header of ipod using a play and pause icon.
+4. after song starts playing music player timer wil start and also it is shwn visually using a bar.

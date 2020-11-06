@@ -96,9 +96,9 @@
 }
 
 .menu-image {
-  width: 46px;
+  width: 49px;
   position: absolute;
-  left: 97px;
+  left: 96px;
   top: 28px;
 }
 
@@ -117,7 +117,7 @@
 }
 
 .playpause-image {
-  width: 35px;
+  width: 40px;
   position: absolute;
   bottom: 27px;
   left: 100px;
@@ -331,7 +331,7 @@
 /* -------------------------------------------------active and auxillary classes------------------------------------------------------------------------- */
 
 .active {
-  background-color: teal;
+  background-color: #41acac;
   color: white;
   height: 25px;
   padding: 5px;
@@ -387,11 +387,22 @@
   .wheel-button {
     left: 59px;
   }
+
+  .outer {
+    width: 185px;
+  }
 }
 
 @media only screen and (max-width: 370px) {
   .wheel-button {
     left: 52px;
+  }
+
+  .left-span {
+    left: 22px;
+  }
+  .right-span {
+    right: 18px;
   }
 }
 
@@ -424,5 +435,9 @@
   .playpause-image {
     bottom: 22px;
     left: 90px;
+  }
+
+  .outer {
+    width: 158px;
   }
 }
