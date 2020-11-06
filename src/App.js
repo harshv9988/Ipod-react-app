@@ -299,7 +299,7 @@ class App extends React.Component {
 
   playPause = () => {
     // function handling clicks on play/pause button and to play and pause the song
-    if (this.state.play === false) {
+    if (this.state.play === false && this.state.globalplay) {
       this.setState(
         {
           play: true,
@@ -310,7 +310,7 @@ class App extends React.Component {
           this.audio.play();
         }
       );
-    } else if (this.state.play === true) {
+    } else if (this.state.play === true && this.state.globalplay) {
       this.setState(
         {
           play: false,
@@ -341,10 +341,14 @@ class App extends React.Component {
     }
 
     if (this.state.globalplay === false) {
-      this.playPause();
-      this.setState({
-        globalplay: true,
-      });
+      this.setState(
+        {
+          globalplay: true,
+        },
+        () => {
+          this.playPause();
+        }
+      );
     }
   };
 
