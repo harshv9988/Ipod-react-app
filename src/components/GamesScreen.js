@@ -7,7 +7,7 @@ const GamesScreen = (props) => {
     <div className={`${gamesscreen ? "games-screen" : "hide"}`}>
       {/* ---------------------------------------------Game screen Image--------------------------------------------------- */}
       <div className="display-screen">
-        <img src={gameimage} alt="game-image" className="round-image" />
+        <img src={gameimage} alt="game" className="round-image" />
       </div>
     </div>
   );

@@ -158,7 +158,6 @@
   position: absolute;
   right: 44px;
   width: 10px;
-  top: 1px;
 }
 
 .play img {
@@ -180,7 +179,7 @@
 .display-flex-screen {
   width: 92%;
   height: 98%;
-  background-color: white;
+  background-color: black;
   margin: auto;
   display: flex;
   flex-direction: row;

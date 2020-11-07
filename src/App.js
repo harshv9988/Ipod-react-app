@@ -38,6 +38,11 @@ class App extends React.Component {
     this.audio = new Audio(song); // imported audio
   }
 
+  componentDidMount() {
+    // to fire the zingtouch function to check rotation
+    this.rotateClick();
+  }
+
   rotateClick = () => {
     // zingtouch function to apply rotate effect on wheel
     var counter = 0;
@@ -299,28 +304,30 @@ class App extends React.Component {
 
   playPause = () => {
     // function handling clicks on play/pause button and to play and pause the song
-    if (this.state.play === false && this.state.globalplay) {
-      this.setState(
-        {
-          play: true,
-        },
-        () => {
-          this.setWidth();
-          this.setTime();
-          this.audio.play();
-        }
-      );
-    } else if (this.state.play === true && this.state.globalplay) {
-      this.setState(
-        {
-          play: false,
-        },
-        () => {
-          clearInterval(this.state.timerfill);
-          clearInterval(this.state.barfill);
-          this.audio.pause();
-        }
-      );
+    if (this.state.globalplay) {
+      if (this.state.play === false) {
+        this.setState(
+          {
+            play: true,
+          },
+          () => {
+            this.setWidth();
+            this.setTime();
+            this.audio.play();
+          }
+        );
+      } else if (this.state.play === true) {
+        this.setState(
+          {
+            play: false,
+          },
+          () => {
+            clearInterval(this.state.timerfill);
+            clearInterval(this.state.barfill);
+            this.audio.pause();
+          }
+        );
+      }
     }
   };
 
@@ -329,7 +336,6 @@ class App extends React.Component {
     var playingaudio = this.audio;
 
     if (playingaudio.currentTime >= playingaudio.duration) {
-      console.log("in");
       this.setState(
         {
           play: false,
